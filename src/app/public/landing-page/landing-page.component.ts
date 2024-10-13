@@ -1,13 +1,27 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit,
+         Component, 
+         ElementRef, 
+         Input, 
+         OnInit, 
+         QueryList, 
+         Renderer2, 
+         TemplateRef, 
+         ViewChild, 
+         ViewChildren } from '@angular/core';
+import { LandingHeaderComponent } from './landing-header/landing-header.component';
+import { NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-landing-page',
+  standalone: true,
+  imports: [NgTemplateOutlet, LandingHeaderComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: '../../assets/css/main.scss'
 })
 export class LandingPageComponent implements OnInit, AfterViewInit  {
   @ViewChild('bgvid') vid!: ElementRef;
   @ViewChild('#polina button') pauseButton!: ElementRef;
-  
+  // @Input()
+  // headerTemplate?: TemplateRef<any>;
   //@ViewChildren('#polina button')
   //pauseButton!: QueryList<ElementRef>;
   

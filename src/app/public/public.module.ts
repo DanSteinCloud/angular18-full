@@ -20,10 +20,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    LandingPageComponent,
-    LandingHeaderComponent,
-    LandingContentComponent,
-    LandingFooterComponent
   ],
   imports: [
     CommonModule,
